@@ -15,11 +15,10 @@ public class JdbcApplication {
 	}
 
 	@Bean
-	CommandLineRunner commandLineRunner(PartRepository parts) {
+	public CommandLineRunner commandLineRunner(PartRepository parts) {
 		return  args -> {
 			parts.save(new Part("cog", 5));
 			parts.save(new Part("goc", 10));
 		};
 	}
-
 }

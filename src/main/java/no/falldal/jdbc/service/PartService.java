@@ -1,4 +1,4 @@
-package no.falldal.jdbc;
+package no.falldal.jdbc.service;
 
 import no.falldal.jdbc.model.Part;
 import no.falldal.jdbc.repository.PartRepository;
@@ -20,5 +20,19 @@ public class PartService {
         return partRepository.findAll();
     }
 
+    public Part getPartById(Integer id) {
+        return partRepository.findById(id).orElse(null);
+    }
 
+    public Part createPart(Part part) {
+        return partRepository.save(part);
+    }
+
+    public void deletePart(Integer id) {
+        partRepository.delete(getPartById(id));
+    }
+
+    public Part updatePart(Part part) {
+        return partRepository.save(part);
+    }
 }
