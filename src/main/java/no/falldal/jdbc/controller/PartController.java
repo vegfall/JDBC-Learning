@@ -1,6 +1,5 @@
 package no.falldal.jdbc.controller;
 
-import jakarta.websocket.server.PathParam;
 import no.falldal.jdbc.model.Part;
 import no.falldal.jdbc.service.PartService;
 import org.springframework.beans.factory.annotation.Autowired;
